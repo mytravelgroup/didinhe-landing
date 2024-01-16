@@ -1,0 +1,36 @@
+header {
+  padding: 1.8rem 0;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .left {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+    }
+  }
+
+  .brand {
+    display: flex;
+    align-items: center;
+    font-size: 1.8rem;
+    font-weight: 600;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    width: 3.4rem;
+  }
+
+  .nav-items li {
+    font-weight: 500;
+    display: inline-block;
+    &:not(:last-child) {
+      margin-right: 1rem;
+    }
+  }
+}

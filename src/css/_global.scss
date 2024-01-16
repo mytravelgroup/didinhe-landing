@@ -1,0 +1,135 @@
+:root {
+  --primary-color: #{$primary-color};
+  --secondary-color: #{$secondary-color};
+  --white-color: #{$white-color};
+  --black-color: #{$black-color};
+  --light-color: #{$light-color};
+  --dark-color: #{$dark-color};
+  --blue-color: #{$blue-color};
+  --blue-bg-color: #{$blue-bg-color};
+
+  --blue-rgb: #{hexToRGB($blue-color)};
+
+  --header-top: 4rem;
+  --header-height: 10rem;
+  --header-nav-bottom: 40px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  scroll-behavior: smooth;
+  font-size: 1.6rem;
+  line-height: 1.55;
+
+  color: var(--dark-color);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
+
+  &.no-scroll {
+    height: 100%;
+    overflow: hidden;
+  }
+}
+
+a {
+  color: var(--black-color);
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 600;
+  line-height: 1.25;
+  color: var(--black-color);
+}
+
+img {
+  max-width: 100%;
+}
+
+.container {
+  padding: 0 8rem;
+  max-width: 1216px;
+  margin: 0 auto;
+  background-color: w;
+
+  @include breakpoint($breakpoint-sm) {
+    padding: 0 3rem;
+  }
+}
+
+h2.title {
+  font-size: 3.6rem;
+  margin-bottom: 1.2rem;
+}
+
+// Utilities
+.text-center {
+  text-align: center;
+}
+
+.text-primary {
+  color: var(--primary-color);
+}
+
+.text-secondary {
+  color: var(--secondary-color);
+}
+
+.text-white {
+  color: var(--white-color);
+}
+
+.text-bold {
+  font-weight: 600;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.highlight {
+  border-bottom: 6px solid var(--primary-color);
+}
+
+.cta {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  font-weight: 600;
+  font-size: 1.4rem;
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: none;
+}
+
+.badge {
+  font-size: 1.4rem;
+  color: var(--blue-color);
+  padding: 2px 10px;
+  border-radius: 20px;
+  background-color: var(--blue-bg-color);
+  display: inline-block;
+}
+
+.section-heading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 8rem;
+  text-align: center;
+}

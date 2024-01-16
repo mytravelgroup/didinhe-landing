@@ -1,0 +1,32 @@
+section.cta-section {
+  padding: 6rem 0;
+
+  .section-heading {
+    margin-bottom: 4rem;
+  }
+
+  ul.features {
+    display: flex;
+    justify-content: center;
+    gap: #{$column-gap};
+    margin: 2rem 0;
+
+    li {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .material-icons {
+      color: var(--blue-color);
+      background-color: var(--blue-bg-color);
+      padding: 5px;
+      border-radius: 100%;
+    }
+  }
+
+  .cta {
+    display: block;
+    margin: auto;
+  }
+}
