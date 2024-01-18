@@ -6,6 +6,10 @@ section.key-benefits {
     flex-direction: row;
     gap: #{$column-gap};
 
+    @include breakpoint($breakpoint-sm) {
+      flex-direction: column;
+    }
+
     .column {
       flex: 1;
       display: flex;
