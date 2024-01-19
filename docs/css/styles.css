@@ -223,6 +223,14 @@ section.hero-banner .container .column {
   flex-direction: column;
   justify-content: center;
 }
+section.hero-banner figure {
+  border-radius: 8px;
+  box-shadow: rgba(99, 99, 99, 0.4) 0px 4px 16px 0px;
+}
+section.hero-banner figure img {
+  display: block;
+  border-radius: 8px;
+}
 section.hero-banner .content {
   margin-bottom: 6.4rem;
 }
