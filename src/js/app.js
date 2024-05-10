@@ -21,5 +21,5 @@
 
   const tripDetailUrl = `${APP_TRIP_URL}${tripId}`;
   linkButton.setAttribute('href', tripDetailUrl);
-  linkButton.click();
+  // linkButton.click();
 })();
