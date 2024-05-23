@@ -12,6 +12,13 @@
  */
 (function initUniversalFunction() {
   const APP_TRIP_URL = 'didinhe://trip_details?tripId=';
+  const APP_TRIP_URL_STAGING = 'didinhe-staging://trip_details?tripId=';
+  const $body = document.body;
+
+  const baseUrl = $body.classList.contains('staging')
+    ? APP_TRIP_URL_STAGING
+    : APP_TRIP_URL;
+
   const linkButton = document.getElementById('open-app-btn');
   if (!linkButton) return;
 
@@ -19,7 +26,7 @@
   const tripId = new URLSearchParams(window.location.search).get('tripId');
   if (!tripId) return;
 
-  const tripDetailUrl = `${APP_TRIP_URL}${tripId}`;
+  const tripDetailUrl = `${baseUrl}${tripId}`;
   linkButton.setAttribute('href', tripDetailUrl);
   linkButton.click();
 })();
