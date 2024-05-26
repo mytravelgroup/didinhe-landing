@@ -13,10 +13,13 @@
 (function initUniversalFunction() {
   const APP_TRIP_URL = 'didinhe://trip_details?tripId=';
   const APP_TRIP_URL_STAGING = 'didinhe-staging://trip_details?tripId=';
+  const APP_TRIP_URL_DEV = 'didinhedev://trip_details?tripId=';
   const $body = document.body;
 
   const baseUrl = $body.classList.contains('staging')
     ? APP_TRIP_URL_STAGING
+    : $body.classList.contains('develop')
+    ? APP_TRIP_URL_DEV
     : APP_TRIP_URL;
 
   const linkButton = document.getElementById('open-app-btn');
