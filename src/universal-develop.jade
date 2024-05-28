@@ -1,8 +1,20 @@
 doctype html
 html(lang="en")
   head
-    title didinhe develop
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title didinhe - Tham gia chuyến đi
+
+    link(rel="stylesheet", href="./css/reset.css")
+    link(rel="stylesheet", href="./css/universal.css")
+  
 
   body.develop 
-    a#open-app-btn Mở ứng dụng didinhe (dev) nào
+    main
+      a#open-app-btn
+        .app-logo
+          img(src="./assets/images/didinhe-logo.png", alt="didinhe application")
+      p Bấm vào đây để mở ứng dụng <br/> và tham gia chuyến đi nhé
+
     script(src="./js/app.js")

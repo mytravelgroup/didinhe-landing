@@ -1,0 +1,32 @@
+body {
+  font-family: "Inter", sans-serif;
+  scroll-behavior: smooth;
+  color: #141c24;
+}
+body a {
+  color: #141c24;
+  text-decoration: none;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+}
+main .app-logo {
+  width: 100%;
+  max-width: 200px;
+  margin: 0 auto 10px;
+}
+main .app-logo img {
+  width: 100%;
+  object-fit: contain;
+}
+
+p {
+  font-weight: 500;
+  text-align: center;
+  color: #38b6ff;
+}

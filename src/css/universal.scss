@@ -1,0 +1,37 @@
+@import './_variables';
+
+body {
+  font-family: 'Inter', sans-serif;
+  scroll-behavior: smooth;
+  color: $black-color;
+
+  a {
+    color: $black-color;
+    text-decoration: none;
+  }
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+
+  .app-logo {
+    width: 100%;
+    max-width: 200px;
+    margin: 0 auto 10px;
+
+    img {
+      width: 100%;
+      object-fit: contain;
+    }
+  }
+}
+
+p {
+  font-weight: 500;
+  text-align: center;
+  color: #38b6ff;
+}

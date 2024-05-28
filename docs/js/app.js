@@ -10,18 +10,26 @@
 /**
  * Init universal function
  */
-(function initUniversalFunction() {
-  const APP_TRIP_URL = 'didinhe://trip_details?tripId=';
-  const APP_TRIP_URL_STAGING = 'didinhe-staging://trip_details?tripId=';
-  const APP_TRIP_URL_DEV = 'didinhe-dev://trip_details?tripId=';
+
+function getAppScheme() {
   const $body = document.body;
+  if ($body.classList.contains('staging')) return 'didinhe-staging://';
+  if ($body.classList.contains('develop')) return 'didinhe-dev://';
+  return 'didinhe://';
+}
 
-  const baseUrl = $body.classList.contains('staging')
-    ? APP_TRIP_URL_STAGING
-    : $body.classList.contains('develop')
-    ? APP_TRIP_URL_DEV
-    : APP_TRIP_URL;
+function getAppStoreURL() {
+  const $body = document.body;
+  if ($body.classList.contains('staging'))
+    return 'https://apps.apple.com/us/app/didinhe-staging/id1551013653';
+  if ($body.classList.contains('develop'))
+    return 'https://apps.apple.com/us/app/didinhe-dev/id1551013653';
+  return 'https://apps.apple.com/us/app/didinhe/id1551013653';
+}
 
+(function initUniversalFunction() {
+  const appScheme = getAppScheme();
+  const baseUrl = `${appScheme}trip_join?tripId=`;
   const linkButton = document.getElementById('open-app-btn');
   if (!linkButton) return;
 
@@ -30,6 +38,28 @@
   if (!tripId) return;
 
   const tripDetailUrl = `${baseUrl}${tripId}`;
-  linkButton.setAttribute('href', tripDetailUrl);
-  linkButton.click();
+  linkButton.addEventListener('click', () => {
+    const TIME_OUT = 3000; // Time to wait before redirecting to the App Store
+    const now = new Date().getTime();
+    const link = document.createElement('a');
+
+    link.href = tripDetailUrl;
+    link.style.display = 'none';
+    document.body.appendChild(link);
+    link.click();
+
+    // Set a timeout to redirect to the App Store if the app is not installed
+    setTimeout(function () {
+      var elapsed = new Date().getTime() - now;
+      if (elapsed < TIME_OUT + 100) {
+        // 100 ms buffer
+        window.location.href = getAppStoreURL();
+      }
+    }, TIME_OUT);
+
+    // Clean up the iframe after some time to avoid memory leaks
+    setTimeout(function () {
+      document.body.removeChild(iframe);
+    }, TIME_OUT + 1000);
+  });
 })();
