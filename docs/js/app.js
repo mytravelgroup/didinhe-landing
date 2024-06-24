@@ -21,7 +21,7 @@ function getAppScheme() {
 function getAppStoreURL() {
   const $body = document.body;
   if ($body.classList.contains('staging'))
-    return 'https://apps.apple.com/us/app/didinhe-staging/id1551013653';
+    return 'https://testflight.apple.com/join/HJkMQiUU';
   if ($body.classList.contains('develop'))
     return 'https://apps.apple.com/us/app/didinhe-dev/id1551013653';
   return 'https://apps.apple.com/us/app/didinhe/id1551013653';
