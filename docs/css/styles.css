@@ -370,3 +370,45 @@ section.faq-section .questions-list .question-item strong {
   color: var(--primary-color);
   font-weight: 600;
 }
+
+section.privacy-content {
+  --block-spacing: 2rem;
+  padding: 4rem 2rem;
+}
+@media only screen and (max-width: 768px) {
+  section.privacy-content {
+    padding: 6rem 0;
+  }
+}
+section.privacy-content a {
+  color: blue;
+  font-weight: bold;
+}
+section.privacy-content p,
+section.privacy-content h1,
+section.privacy-content h2,
+section.privacy-content h3 {
+  margin-bottom: var(--block-spacing);
+  text-wrap: balance;
+}
+section.privacy-content strong {
+  font-weight: 700;
+}
+section.privacy-content ul {
+  margin-bottom: var(--block-spacing);
+}
+section.privacy-content ul li {
+  margin-left: 2rem;
+  list-style-type: disc;
+}
+section.privacy-content h1 {
+  font-size: 3.2rem;
+  font-weight: 700;
+}
+section.privacy-content p {
+  text-wrap: pretty;
+}
+section.privacy-content .verify {
+  font-weight: 600;
+  color: orange;
+}
