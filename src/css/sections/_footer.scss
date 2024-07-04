@@ -20,9 +20,21 @@ footer {
     filter: grayscale(100%);
   }
 
-  .copyright {
-    color: var(--black-color);
-    border-top: 1px solid var(--light-color);
-    padding: 2rem 0;
+  .second-block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .tnc {
+      color: var(--primary-color);
+      font-weight: 500;
+    }
+
+
+    .copyright {
+      color: var(--black-color);
+      border-top: 1px solid var(--light-color);
+      padding: 2rem 0;
+    }
   }
 }
