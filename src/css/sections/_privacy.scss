@@ -1,0 +1,49 @@
+section.privacy-content {
+  --block-spacing: 2rem;
+
+  padding: 4rem 2rem;
+
+  @include breakpoint($breakpoint-sm) {
+    padding: 6rem 0;
+  }
+
+  a {
+    color: blue;
+    font-weight: bold;
+  }
+
+  p,
+  h1,
+  h2,
+  h3 {
+    margin-bottom: var(--block-spacing);
+    text-wrap: balance;
+  }
+
+  strong {
+    font-weight: 700;
+  }
+
+  ul {
+    margin-bottom: var(--block-spacing);
+
+    li {
+      margin-left: 2rem;
+      list-style-type: disc;
+    }
+  }
+
+  h1 {
+    font-size: 3.2rem;
+    font-weight: 700;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  .verify {
+    font-weight: 600;
+    color: orange
+  }
+}
