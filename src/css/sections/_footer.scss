@@ -2,8 +2,12 @@ footer {
   padding: 6rem 0;
 
   .first-block {
-    max-width: 320px;
+    // max-width: 320px;
     padding: 2rem 0;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
   }
 
   .brand {
@@ -20,16 +24,16 @@ footer {
     filter: grayscale(100%);
   }
 
+  .tnc {
+    color: var(--primary-color);
+    font-weight: 500;
+  }
+
+
   .second-block {
     display: flex;
     justify-content: space-between;
     align-items: center;
-
-    .tnc {
-      color: var(--primary-color);
-      font-weight: 500;
-    }
-
 
     .copyright {
       color: var(--black-color);
