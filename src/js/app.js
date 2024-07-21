@@ -24,7 +24,7 @@ function getAppStoreURL() {
     return 'https://testflight.apple.com/join/HJkMQiUU';
   if ($body.classList.contains('develop'))
     return 'https://apps.apple.com/us/app/didinhe-dev/id1551013653';
-  return 'https://testflight.apple.com/join/HJkMQiUU';
+  return 'https://apps.apple.com/app/didinhe/id6479662100';
 }
 
 (function initUniversalFunction() {
